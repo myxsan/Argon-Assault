@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    float xThrow, yThrow;
     [Header("Movement Speeds")]
     [SerializeField] float xControlSpeed = 2f;
     [SerializeField] float yControlSpeed = 1f;
@@ -12,11 +13,16 @@ public class PlayerController : MonoBehaviour
     [Header("Position Range")]
     [SerializeField] float xRange = 10f;
     [SerializeField] float yRange = 7f;
-    void Start()
-    {
-        
-    }
 
+    [Header("Rotation Factors")]
+    [SerializeField] float positionPitchFactor = -2f;
+    [SerializeField] float controlPitchFactor = -15;
+
+    [SerializeField] float positionYawFactor = 2f;
+
+    [SerializeField] float controlRollFactor = -20f;
+
+    
 
     void Update()
     {
@@ -26,13 +32,22 @@ public class PlayerController : MonoBehaviour
 
     void ProcessRotation()
     {
-        this.transform.localRotation = Quaternion.Euler(-30, 30 , 0);
+        float pitchDueToPosition = transform.localPosition.y * positionPitchFactor;
+        float pitchDueToControlThrow = yThrow * controlPitchFactor;
+
+        float pitch = pitchDueToPosition + pitchDueToControlThrow;
+
+        float yaw = transform.localPosition.x * positionYawFactor;
+
+        float roll = xThrow * controlRollFactor;
+
+        this.transform.localRotation = Quaternion.Euler(pitch, yaw, roll);
     }
 
     void ProcessTranslation()
     {
-        float xThrow = Input.GetAxis("Horizontal");
-        float yThrow = Input.GetAxis("Vertical");
+        xThrow = Input.GetAxis("Horizontal");
+        yThrow = Input.GetAxis("Vertical");
 
         float xOffset = xThrow * xControlSpeed * Time.deltaTime;
         float rawXPos = transform.localPosition.x + xOffset;
