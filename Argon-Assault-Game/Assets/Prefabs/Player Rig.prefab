@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6413996767172281267}
   m_LocalRotation: {x: 0.14855987, y: -0, z: -0, w: 0.98890346}
-  m_LocalPosition: {x: 0, y: 10.65, z: -19.69}
+  m_LocalPosition: {x: 0, y: 10.65, z: -26.48}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6413996768401454999}
@@ -146,17 +146,29 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player Ship
       objectReference: {fileID: 0}
+    - target: {fileID: 614514449618547167, guid: 09609f7110dcefe4e9268d576d81cafb, type: 3}
+      propertyPath: lasers.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 614514449618547167, guid: 09609f7110dcefe4e9268d576d81cafb, type: 3}
+      propertyPath: lasers.Array.data[0]
+      value: 
+      objectReference: {fileID: 5006587883489199846}
+    - target: {fileID: 614514449618547167, guid: 09609f7110dcefe4e9268d576d81cafb, type: 3}
+      propertyPath: lasers.Array.data[1]
+      value: 
+      objectReference: {fileID: 6911145916836509009}
     - target: {fileID: 616338580803480550, guid: 09609f7110dcefe4e9268d576d81cafb, type: 3}
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 616338580803480550, guid: 09609f7110dcefe4e9268d576d81cafb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 616338580803480550, guid: 09609f7110dcefe4e9268d576d81cafb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.9109807
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 616338580803480550, guid: 09609f7110dcefe4e9268d576d81cafb, type: 3}
       propertyPath: m_LocalPosition.z
@@ -204,6 +216,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 146431910517072273}
     m_Modifications:
+    - target: {fileID: 941999740450972573, guid: 8f1f817003705024082915978956cf37, type: 3}
+      propertyPath: InitialModule.size3D
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 941999740450972573, guid: 8f1f817003705024082915978956cf37, type: 3}
+      propertyPath: InitialModule.startSizeY.scalar
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 941999740450972573, guid: 8f1f817003705024082915978956cf37, type: 3}
+      propertyPath: InitialModule.startSizeZ.scalar
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 941999740450972573, guid: 8f1f817003705024082915978956cf37, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 2871816294595608148, guid: 8f1f817003705024082915978956cf37, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -250,10 +278,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3467151259119968515, guid: 8f1f817003705024082915978956cf37, type: 3}
       propertyPath: m_Name
-      value: Laser (1)
+      value: LaserLeft
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f1f817003705024082915978956cf37, type: 3}
+--- !u!1 &6911145916836509009 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3467151259119968515, guid: 8f1f817003705024082915978956cf37, type: 3}
+  m_PrefabInstance: {fileID: 8067241244596278354}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8459786036850124773
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -261,6 +294,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 146431910517072273}
     m_Modifications:
+    - target: {fileID: 941999740450972573, guid: 8f1f817003705024082915978956cf37, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 2871816294595608148, guid: 8f1f817003705024082915978956cf37, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -307,7 +344,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3467151259119968515, guid: 8f1f817003705024082915978956cf37, type: 3}
       propertyPath: m_Name
-      value: Laser
+      value: LaserRight
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f1f817003705024082915978956cf37, type: 3}
+--- !u!1 &5006587883489199846 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3467151259119968515, guid: 8f1f817003705024082915978956cf37, type: 3}
+  m_PrefabInstance: {fileID: 8459786036850124773}
+  m_PrefabAsset: {fileID: 0}
