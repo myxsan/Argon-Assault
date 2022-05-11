@@ -326,8 +326,6 @@ PlayableDirector:
   m_SceneBindings:
   - key: {fileID: -8901499729752958525, guid: ea9e18c5eeaa5b343aae2c92caf9ae1a, type: 2}
     value: {fileID: 1941281110}
-  - key: {fileID: -3516691582209428886, guid: ea9e18c5eeaa5b343aae2c92caf9ae1a, type: 2}
-    value: {fileID: 1509052314}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &1090941426
@@ -357,7 +355,7 @@ GameObject:
   - component: {fileID: 1336672805}
   - component: {fileID: 1336672804}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Bridge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -432,13 +430,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1336672803}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 165.25746, y: 57.004204, z: 243.60066}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: 0.15624188, z: -0, w: 0.9877189}
+  m_LocalPosition: {x: 165.25746, y: 43.1, z: 287.26}
+  m_LocalScale: {x: 92.90184, y: 3.5322, z: 6.4678}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 17.978, z: 0}
 --- !u!1 &1509052313
 GameObject:
   m_ObjectHideFlags: 0
@@ -453,7 +451,7 @@ GameObject:
   - component: {fileID: 1509052315}
   - component: {fileID: 1509052314}
   m_Layer: 0
-  m_Name: Enemy
+  m_Name: Enemy Spaceholder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -548,7 +546,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1509052313}
   m_LocalRotation: {x: 0.03343855, y: -0.6042555, z: 0.025392627, w: 0.7956836}
-  m_LocalPosition: {x: 353.18915, y: 39.27739, z: 330.30087}
+  m_LocalPosition: {x: 165.3, y: 27.28, z: 254.8}
   m_LocalScale: {x: 20, y: 20, z: 20}
   m_Children: []
   m_Father: {fileID: 0}
