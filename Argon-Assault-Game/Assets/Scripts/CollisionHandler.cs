@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class CollisionHandler : MonoBehaviour
 {
+    [SerializeField] ParticleSystem crashVFX;
+    [SerializeField] GameObject masterTimeline;
     
     private void OnCollisionEnter(Collision other) {
     }
@@ -14,8 +16,12 @@ public class CollisionHandler : MonoBehaviour
 
     private void StartCrashSequence()
     {
-        StartCoroutine(ResetScene());
+        masterTimeline.SetActive(false);
+        GetComponent<MeshRenderer>().enabled = false;
         GetComponent<PlayerController>().enabled = false;
+        GetComponent<BoxCollider>().enabled = false;
+        crashVFX.Play();
+        StartCoroutine(ResetScene());
     }
 
     private IEnumerator ResetScene()
