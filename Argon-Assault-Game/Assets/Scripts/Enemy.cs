@@ -8,6 +8,8 @@ public class Enemy : MonoBehaviour
     [SerializeField] GameObject deathVFX;
     [SerializeField] Transform parent;
 
+    [SerializeField] int hitPoints = 6;
+
     [Header("Score")]
     ScoreBoard scoreBoard;
     [SerializeField] int scorePerHit = 15;
@@ -15,11 +17,25 @@ public class Enemy : MonoBehaviour
     private void Awake() {
         scoreBoard = FindObjectOfType<ScoreBoard>();
     }
-    private void OnParticleCollision(GameObject other) {
-        Debug.Log($"{this.gameObject.name} : hit by {other.gameObject.name}");
+    private void OnParticleCollision(GameObject other)
+    {
+        HitProcess();
+        if(hitPoints < 1)
+        {
+            KillEnemy();
+        }
+    }
+
+    void HitProcess()
+    {
+        scoreBoard.IncreaseScore(scorePerHit);
+        hitPoints--;
+    }
+
+    void KillEnemy()
+    {
         GameObject vfx = Instantiate(deathVFX, this.transform.position, Quaternion.identity);
         vfx.transform.parent = parent;
-        scoreBoard.IncreaseScore(scorePerHit);
         Destroy(this.gameObject);
     }
 }
