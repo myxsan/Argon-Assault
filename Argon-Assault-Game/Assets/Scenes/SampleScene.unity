@@ -158,6 +158,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathVFX: {fileID: 3200836327345539238, guid: d2c744d78799a47488ef7b2f880fbb22, type: 3}
   parent: {fileID: 2066221698}
+  scorePerHit: 15
 --- !u!95 &287897587
 Animator:
   serializedVersion: 3
@@ -364,6 +365,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathVFX: {fileID: 3200836327345539238, guid: d2c744d78799a47488ef7b2f880fbb22, type: 3}
   parent: {fileID: 2066221698}
+  scorePerHit: 15
 --- !u!95 &675874485
 Animator:
   serializedVersion: 3
@@ -663,6 +665,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathVFX: {fileID: 3200836327345539238, guid: d2c744d78799a47488ef7b2f880fbb22, type: 3}
   parent: {fileID: 2066221698}
+  scorePerHit: 15
 --- !u!1 &1090941424
 GameObject:
   m_ObjectHideFlags: 0
@@ -823,6 +826,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathVFX: {fileID: 3200836327345539238, guid: d2c744d78799a47488ef7b2f880fbb22, type: 3}
   parent: {fileID: 2066221698}
+  scorePerHit: 15
 --- !u!1 &1336998584
 GameObject:
   m_ObjectHideFlags: 0
@@ -858,6 +862,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathVFX: {fileID: 3200836327345539238, guid: d2c744d78799a47488ef7b2f880fbb22, type: 3}
   parent: {fileID: 2066221698}
+  scorePerHit: 15
 --- !u!95 &1336998586
 Animator:
   serializedVersion: 3
@@ -1083,11 +1088,55 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathVFX: {fileID: 3200836327345539238, guid: d2c744d78799a47488ef7b2f880fbb22, type: 3}
   parent: {fileID: 2066221698}
+  scorePerHit: 15
 --- !u!95 &1941281110 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 6413996768401454996, guid: 835f41bb4723c3640a05f634c0ab8567, type: 3}
   m_PrefabInstance: {fileID: 6413996766481870530}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1989876147
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1989876149}
+  - component: {fileID: 1989876148}
+  m_Layer: 0
+  m_Name: Score Board
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1989876148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1989876147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b87fde106fdc814fae9f2a3bb705a5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1989876149
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1989876147}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2066221697
 GameObject:
   m_ObjectHideFlags: 0
@@ -1129,6 +1178,10 @@ PrefabInstance:
       propertyPath: masterTimeline
       value: 
       objectReference: {fileID: 1090941424}
+    - target: {fileID: 2830128219107096297, guid: 835f41bb4723c3640a05f634c0ab8567, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6413996768401454998, guid: 835f41bb4723c3640a05f634c0ab8567, type: 3}
       propertyPath: m_Name
       value: Player Rig
