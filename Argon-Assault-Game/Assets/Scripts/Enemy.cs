@@ -7,9 +7,9 @@ public class Enemy : MonoBehaviour
     [Header("References")]
     [SerializeField] GameObject deathVFX;
     [SerializeField] GameObject hitVFX;
-    [SerializeField] Transform parent;
     [SerializeField] int hitPoints = 6;
-
+    GameObject parentGameObject;
+    
     [Header("Score")]
     ScoreBoard scoreBoard;
     [SerializeField] int scorePerHit = 15;
@@ -17,6 +17,7 @@ public class Enemy : MonoBehaviour
     void Awake()
     {
         scoreBoard = FindObjectOfType<ScoreBoard>();
+        parentGameObject = GameObject.FindWithTag("SpawnAtRuntime");
     }
     void Start()
     {
@@ -42,14 +43,14 @@ public class Enemy : MonoBehaviour
     {
         scoreBoard.IncreaseScore(scorePerHit);
         hitPoints--;
-        GameObject hvfx = Instantiate(hitVFX, this.transform.position, Quaternion.identity);
-        hvfx.transform.parent = parent;
+        GameObject vfx = Instantiate(hitVFX, this.transform.position, Quaternion.identity);
+        vfx.transform.parent = parentGameObject.transform;
     }
 
     void KillEnemy()
     {
-        GameObject dvfx = Instantiate(deathVFX, this.transform.position, Quaternion.identity);
-        dvfx.transform.parent = parent;
+        GameObject vfx = Instantiate(deathVFX, this.transform.position, Quaternion.identity);
+        vfx.transform.parent = parentGameObject.transform;
         Destroy(this.gameObject);
     }
 }
