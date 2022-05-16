@@ -6,21 +6,33 @@ public class Enemy : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] GameObject deathVFX;
+    [SerializeField] GameObject hitVFX;
     [SerializeField] Transform parent;
-
     [SerializeField] int hitPoints = 6;
 
     [Header("Score")]
     ScoreBoard scoreBoard;
     [SerializeField] int scorePerHit = 15;
 
-    private void Awake() {
+    void Awake()
+    {
         scoreBoard = FindObjectOfType<ScoreBoard>();
     }
-    private void OnParticleCollision(GameObject other)
+    void Start()
+    {
+        AddRigidbody();
+    }
+
+    void AddRigidbody()
+    {
+        Rigidbody enemyRb = gameObject.AddComponent<Rigidbody>();
+        enemyRb.useGravity = false;
+    }
+
+    void OnParticleCollision(GameObject other)
     {
         HitProcess();
-        if(hitPoints < 1)
+        if (hitPoints < 1)
         {
             KillEnemy();
         }
@@ -30,12 +42,14 @@ public class Enemy : MonoBehaviour
     {
         scoreBoard.IncreaseScore(scorePerHit);
         hitPoints--;
+        GameObject hvfx = Instantiate(hitVFX, this.transform.position, Quaternion.identity);
+        hvfx.transform.parent = parent;
     }
 
     void KillEnemy()
     {
-        GameObject vfx = Instantiate(deathVFX, this.transform.position, Quaternion.identity);
-        vfx.transform.parent = parent;
+        GameObject dvfx = Instantiate(deathVFX, this.transform.position, Quaternion.identity);
+        dvfx.transform.parent = parent;
         Destroy(this.gameObject);
     }
 }
