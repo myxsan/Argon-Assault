@@ -188,6 +188,7 @@ GameObject:
   - component: {fileID: 1171266386966948621}
   - component: {fileID: 1181252510223919499}
   - component: {fileID: 3034613826879093661}
+  - component: {fileID: 3726205430068404735}
   m_Layer: 0
   m_Name: Enemy_Purple
   m_TagString: Untagged
@@ -273,9 +274,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathVFX: {fileID: 3200836327345539238, guid: d2c744d78799a47488ef7b2f880fbb22, type: 3}
   hitVFX: {fileID: 1182751620416776638, guid: 1cc7f8fd938974a4993b795adcec0af1, type: 3}
-  parent: {fileID: 0}
   hitPoints: 10
   scorePerHit: 70
+--- !u!65 &3726205430068404735
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1166550030636354781}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10.228247, y: 4.267086, z: 11.603618}
+  m_Center: {x: 0, y: -0.0000029802322, z: 0}
 --- !u!1 &1322656330354653031
 GameObject:
   m_ObjectHideFlags: 0

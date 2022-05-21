@@ -675,6 +675,7 @@ GameObject:
   - component: {fileID: 7081758132200953210}
   - component: {fileID: 7092124876166438896}
   - component: {fileID: 7079591814849920813}
+  - component: {fileID: -1040793621725128774}
   m_Layer: 0
   m_Name: Enemy_Blue
   m_TagString: Untagged
@@ -760,9 +761,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathVFX: {fileID: 3200836327345539238, guid: d2c744d78799a47488ef7b2f880fbb22, type: 3}
   hitVFX: {fileID: 1182751620416776638, guid: 1cc7f8fd938974a4993b795adcec0af1, type: 3}
-  parent: {fileID: 0}
   hitPoints: 8
   scorePerHit: 50
+--- !u!65 &-1040793621725128774
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7078318979933415726}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 11.926746, y: 5.14402, z: 13.02625}
+  m_Center: {x: -0.00000047683716, y: -0.00000059604645, z: 0}
 --- !u!1 &7462616133819037326
 GameObject:
   m_ObjectHideFlags: 0

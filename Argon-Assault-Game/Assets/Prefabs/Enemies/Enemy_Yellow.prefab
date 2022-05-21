@@ -628,6 +628,7 @@ GameObject:
   - component: {fileID: 6944768928516141739}
   - component: {fileID: 6937202211729183557}
   - component: {fileID: 9037576171065504866}
+  - component: {fileID: 3044205370543307806}
   m_Layer: 0
   m_Name: Enemy_Yellow
   m_TagString: Untagged
@@ -713,9 +714,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathVFX: {fileID: 3200836327345539238, guid: d2c744d78799a47488ef7b2f880fbb22, type: 3}
   hitVFX: {fileID: 1182751620416776638, guid: 1cc7f8fd938974a4993b795adcec0af1, type: 3}
-  parent: {fileID: 0}
   hitPoints: 6
   scorePerHit: 30
+--- !u!65 &3044205370543307806
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6922678930895618873}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 11.945585, y: 1.4957151, z: 13.117715}
+  m_Center: {x: 0, y: -0.000007659197, z: 0}
 --- !u!1 &7178285728841792265
 GameObject:
   m_ObjectHideFlags: 0

@@ -240,6 +240,7 @@ GameObject:
   - component: {fileID: 1162663949188481569}
   - component: {fileID: 4019018440279373547}
   - component: {fileID: 2027791674326983138}
+  - component: {fileID: -2996796089458005908}
   m_Layer: 0
   m_Name: Enemy_Black
   m_TagString: Untagged
@@ -325,9 +326,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathVFX: {fileID: 3200836327345539238, guid: d2c744d78799a47488ef7b2f880fbb22, type: 3}
   hitVFX: {fileID: 1182751620416776638, guid: 1cc7f8fd938974a4993b795adcec0af1, type: 3}
-  parent: {fileID: 0}
   hitPoints: 15
   scorePerHit: 100
+--- !u!65 &-2996796089458005908
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3226432804035696446}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.096986, y: 6.6450253, z: 10.620746}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &3775015261309175424
 GameObject:
   m_ObjectHideFlags: 0
